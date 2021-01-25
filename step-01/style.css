@@ -6,11 +6,11 @@ https://ennohyttrek.de
 https://github.com/ennohyttrek
 
 Schritt 01
-Grundlegende CSS Strukturen ánlegen:
+Grundlegende CSS Strukturen anlegen:
 - Reset
 - Layout
 - Typografie
-- Medie Queries
+- Media Queries
 
 Ergebnis ist ein 'vorläufiges Mobiltelefon Design' für die Seite. D.h. es wird der 'natürliche' Fluß der HTML Struktur — nämlich, dass alle Blockelemente untereinander stehen — genutzt um den Inhalt der Seite auf dem vertikalen Viewport bereits nahezu optimal darzustellen. 
 
