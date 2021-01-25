@@ -181,7 +181,7 @@ nav.mobile-nav a {
 }
 
 nav.mobile-nav li:first-child {
-        border-top: 1px solid hsl(200, 21%, 89%);
+    border-top: 1px solid hsl(200, 21%, 89%);
 }
 
 
@@ -198,7 +198,7 @@ body {
 /**Type Mobile Menu **/
 
 nav.mobile-nav {
-        font-size: 2.5em;
+    font-size: 2.5em;
 }
 
 /*
