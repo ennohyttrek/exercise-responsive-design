@@ -260,12 +260,12 @@ RESPONSIVE DESIGN (MEDIA QUERIES)
     article {
         width: 50%;
     }
-    
+
     article figure {
         height: 30vw;
         overflow-y: hidden;
     }
-    
+
     footer {
         min-height: 20vh;
     }
