@@ -249,13 +249,14 @@ RESPONSIVE DESIGN (MEDIA QUERIES)
 
     article {
         width: 50%;
+                min-height: 70vw;
     }
-    
+
     article figure {
         height: 30vw;
         overflow-y: hidden;
     }
-    
+
     footer {
         min-height: 20vh;
     }
@@ -263,16 +264,16 @@ RESPONSIVE DESIGN (MEDIA QUERIES)
 }
 
 @media only screen and (min-width: 1024px) {
-    
-        /**1024px Three Col Layout**/
-    
-        article {
+
+    /**1024px Three Col Layout**/
+
+    article {
         width: 33.33%;
-            min-height: 40vw;
+        min-height: 40vw;
     }
-    
-        article figure {
+
+    article figure {
         height: 22vw;
     }
-    
+
 }
