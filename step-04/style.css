@@ -5,21 +5,21 @@ ehy.training@gmail.com
 https://ennohyttrek.de
 https://github.com/ennohyttrek
 
-Schritt 04
+Schritt 4
 
 Nun geht es endlich an das Layout für größere Screens, also das eigentliche Responsive Design. Dies geschieht im CSS wie schon gesagt alles in den Media Queries. Mit anderen Worten: alles oberhalb der Media Queries ist Mobile Design oder allgemeines Design.
 
-Die erste Media Query bedient den Breakpoint 600 Pixel. Genauer gesagt beinhaltet die Media Query den Wert min-width 600px, also Mindestbreite 600 Pixel. Das heisst, alles CSS was innerhalb der Media Query steht betrifft Screens die mindestens 600px breit sind.
+Die erste Media Query bedient den Breakpoint 600 Pixel. Genauer gesagt beinhaltet die Media Query den Wert min-width: 600px, also Mindestbreite 600 Pixel. Das heisst, alles CSS was innerhalb der Media Query steht betrifft Screens die mindestens 600px breit sind.
 
-In dieser Media Query machen wir als erstes das normale Hauptmenü wieder sichtbar und lassen Mobil Menü und Burger Icon verschwinden.
+In dieser Media Query machen wir als erstes das normale Hauptmenü wieder sichtbar und lassen Mobil Menü und Burger Icon verschwinden. Dies geschieht mittels display: block, bzw. display: none im 'Mini Reset' der Media Query. 
 
-Dann müssen wir uns erst einmal darum kümmern, dass dieses Menü gut aussieht. Also vom Layout (horizontal) und von der Farbigkeit. Wir wollen hierbei ein Sticky Menü machen (Details dazu bitte im Video 'nachschlagen').
+Dann müssen wir uns erst einmal darum kümmern, dass das Hauptmenü gut aussieht. Also vom Layout (horizontal) und von der Farbigkeit. Wir wollen hierbei ein Sticky Menü machen (position: sticky).
 
 Als nächstes machen wir unseren Hauptinhaltsbereich zweispaltig. Das geht, indem mir in der Media Query das MAIN Element zu einem Flex Container machen und die darunterliegenden ARTICLE Elemente auf 50% Breite einstellen. 
 
 Damit die unterschiedlich proportionierten Bilder gleichmässig aussehen, können wir die Höhe des FIGURE Elements abhängig von der Breite (Einheit VW)vereinheitlichen. Dabei müssen wir lediglich beachten deb vertikalen Overflow korrekt einzustellen, nämlich auf 'hidden'.
 
-Der Footer muss nun übrigens nicht mehr 100VW hoch sein. 
+Der Footer muss nun übrigens nicht mehr 100vw hoch sein. Wir setzen in auf einen moderaten Wert von 20vh.
 
 */
 

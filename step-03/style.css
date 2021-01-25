@@ -5,7 +5,7 @@ ehy.training@gmail.com
 https://ennohyttrek.de
 https://github.com/ennohyttrek
 
-Schritt 03
+Schritt 3
 
 In diesem Schritt geht es ausschliesslich darum, das Mobil Menü zu gestalten. Hierbei werden wir auch eine Art Trick anwenden, der es uns ermöglicht, ein relativ brauchbares Mobil Menü ohne JavaScript zu erstellen.
 
@@ -21,7 +21,9 @@ WICHTIG: dieser Code muss in die index.html, er gehört NICHT in das CSS Stylesh
 
 Sobald die index.html so vorbereitet wurde, können wir im CSS mit dem Gestalten des Menüs beginnen. Dies geschieht wieder im Bereich NAVIGATION für Struktur und Layout des Menüs und in COLOR & STYLE für die Farbigkeit. 
 
-Allerdings machen wir vorher noch ein paar kleine Anpassungen im allgemeinen Layout der Seite: zuerst geben wir dem Header oben ein wenig mehr Padding, um sicherzustellen, dass H1 und Burger Icon niemals übereinander liegen zu kommen. 50 Pixel sollten hier ausreichen.
+Anmerkung: Da die Übung hauptsächlich auf das Verständnis des CSS für Responsive Design abzielt, bietet es sich an, die eben beschriebenen Anpassungen im HTML nicht selbst durchzuführen, sondern den Code aus der index.html von Schritt 3 aus den Übungsdateien komplett zu übernehmen.
+
+Zunächst machen wir ein paar kleine Anpassungen im allgemeinen Layout der Seite: zuerst geben wir dem Header oben ein wenig mehr Padding, um sicherzustellen, dass die H1 Überaschrift im Header und das Burger Icon niemals übereinander liegen zu kommen. 50 Pixel sollten hier ausreichen.
 
 Als nächsten geben wir dem Footer und dem Mobil Menü jeweils eine Mindesthöhe, die der Höhe des Viewports entspricht (min-height: 100vh). Durch die Höhe des Footers wird es unwahrscheinlich, dass Besucher bis zum Mobil Menü runterscrollen (auch wenn das nun auch nicht so schlimm wäre). Die Höhe des Mobil Menüs auf 100VH stellt sicher, dass man bei Betätigen des Burger Icons den Eindruck hat es öffnet sich das Mobil Menü (wenn man tatsächlich lediglich an den unteren Seitenrand springt), da sichergestellt ist, dass nichts darüber liegendes sichtbar ist. Dies ist der eigentliche Trick mit dem man JavaScript hierfür vermeidet, und auch der Grund, warum das Mobil Menü in der HTML Abfolge ganz unten liegt.
 
