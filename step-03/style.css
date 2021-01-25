@@ -1,0 +1,208 @@
+/*
+Stylesheet für die Übung Responsive Design
+© 2021 Enno Hyttrek
+ehy.training@gmail.com
+https://ennohyttrek.de
+https://github.com/ennohyttrek
+
+Schritt 03
+
+In diesem Schritt geht es ausschliesslich darum, das Mobil Menü zu gestalten. Hierbei werden wir auch eine Art Trick anwenden, der es uns ermöglicht, ein relativ brauchbares Mobil Menü ohne JavaScript zu erstellen.
+
+Zuerst müssen aber noch ein paar vorbereitende Zeilen in den HTML Code der index.html eingefügt werden. Wir wollen nämlich mittels des Mobil Menüs zwischen den Projektdarstellungen (die ja eigentlich nur eine Projektvorschau sind) navigieren. Dazu muss jedes ARTICLE Element eine ID erhalten, nach folgendem Muster:
+
+<article id="project-01">
+
+Danach muss das HTML für das Mobil Menü entsprechend mit den insgesamt sechs Projekt Links + Home ergänzt werden.
+
+Ausserdem kommt noch etwas mehr (Blind)Text in die Kurzbeschreibungen der Demoprojekte.
+
+WICHTIG: dieser Code muss in die index.html, er gehört NICHT in das CSS Stylesheet. Die Anweisung steht nur aus Gründen der Übersichtlichkeit und Konstanz hier in den CSS Kommentaren.
+
+Sobald die index.html so vorbereitet wurde, können wir im CSS mit dem Gestalten des Menüs beginnen. Dies geschieht wieder im Bereich NAVIGATION für Struktur und Layout des Menüs und in COLOR & STYLE für die Farbigkeit. 
+
+Allerdings machen wir vorher noch ein paar kleine Anpassungen im allgemeinen Layout der Seite: zuerst geben wir dem Header oben ein wenig mehr Padding, um sicherzustellen, dass H1 und Burger Icon niemals übereinander liegen zu kommen. 50 Pixel sollten hier ausreichen.
+
+Als nächstesn geben wir dem Footer und dem Mobil Menü jeweils eine Mindesthöhe, die der Höhe des Viewprots entspricht (min-height: 100vh). Durch die Höhe des Footers wird es unwahrscheinlich, dass Besucher bis zum Mobil Menü runterscrollen (uch wenn das nun auch nicht so schlimm wäre). Die Höhe des Mobil Menüs auf 100 VH stellt sicher, dass man bei Betätigen des Burger Icons den Eindruck hat es öffnet sich das Mobil Menü (auc wenn amn lediglich an den uneren Seitenrand springt), da sichergestellt is, dass nichts darüberliegendes sichtbar ist. Dies ist der eigentliche Trick mit dem man JavaScript hierfür vermeidet, und auch der Grund, warum das Mobil Menü in der HTML Abfolge ganz unten liegt.
+
+Jetzt geht es endlich an die Menügestaltung. Dafür vollziehen wir erst einmal eine kleinen Reset, nämlich für alle ungeordnete Listen in NAV Elementen die Bulletpoints loszuwerden, sowie die Unterstreichung der Links.
+
+Danach gestalten wir die Schaltflächen des Mobil Menüs.
+
+*/
+
+/*
+RESET
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav.main-nav {
+    display: none;
+}
+
+
+/*
+LAYOUT
+*/
+
+.more-link,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    padding: 1rem 20px;
+}
+
+article {
+    padding-bottom: 2rem;
+}
+
+header {
+    padding-top: 50px;
+}
+
+footer,
+nav.mobile-nav,
+article {
+    min-height: 100vh;
+}
+
+footer p {
+    padding-bottom: 0;
+}
+
+/*
+NAVIGATION
+*/
+
+/**Nav Reset **/
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+/**Nav Burger Icon **/
+
+nav.burger-icon {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    padding: 8px;
+}
+
+nav.burger-icon span {
+    display: block;
+    height: 8px;
+    width: 34px;
+    margin-bottom: 3px;
+    border-radius: 3px;
+}
+
+/**Nav Mobile Menu **/
+
+nav.mobile-nav {
+    padding-top: 50px;
+}
+
+nav.mobile-nav ul {
+    padding: 0;
+
+}
+
+nav.mobile-nav ul a {
+    display: block;
+    width: 100%;
+    padding: 0.3em 20px;
+}
+
+
+/*
+COLOR & STYLE
+*/
+
+/**C&S Backgrounds **/
+
+body {
+    background: hsl(200, 21%, 13%);
+}
+
+header {
+    background: hsl(200, 21%, 34%);
+}
+
+main {
+    background: #fff;
+}
+
+/**C&S Type Colors **/
+
+main,
+main a {
+    color: hsl(200, 21%, 13%);
+}
+
+header,
+footer,
+header a,
+footer a {
+    color: hsl(200, 21%, 89%);
+}
+
+
+/**C&S Burger Icon **/
+
+nav.burger-icon span {
+    background: hsl(200, 21%, 68%);
+}
+
+/**C&S Mobile Menu **/
+
+nav.mobile-nav {
+    background: hsl(200, 21%, 34%);
+}
+
+nav.mobile-nav a {
+    color: hsl(200, 21%, 89%);
+    border-bottom: 1px solid hsl(200, 21%, 89%);
+}
+
+nav.mobile-nav li:first-child {
+        border-top: 1px solid hsl(200, 21%, 89%);
+}
+
+
+/*
+TYPOGRAPHY
+*/
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/**Type Mobile Menu **/
+
+nav.mobile-nav {
+        font-size: 2.5em;
+}
+
+/*
+RESPONSIVE DESIGN (MEDIA QUERIES)
+*/
+
+@media only screen and (min-width: 600px) {}

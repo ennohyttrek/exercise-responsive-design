@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Übung Responsive Design</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="home blog logged-in">
+
+    <header>
+        <h1>Übung Responsive Design</h1>
+    </header>
+
+
+    <!--
+Die Navigationsmenüs entsprechen in Struktur, Code, IDs und Klassen dem, was das Theme im WordPress Übungsprojekt erzeugt.
+-->
+    <nav id="main-nav" class="main-nav">
+        <div class="menu-main-de-container">
+            <ul id="menu-main-de" class="menu">
+                <li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="#">Menüpunkt 1</a></li>
+                <li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="#">Menüpunkt 2</a></li>
+                <li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="#">Menüpunkt 3</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="burger-icon">
+        <a href="#mobile-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </nav>
+
+
+
+    <main>
+
+
+        <!--
+Der folgende Bereich entspricht bzw. ähnelt dem Code, der im WordPress Übungsprojekt durch den WP 'Loop' erzeugt wird.
+-->
+
+        <article>
+
+            <figure class="image my-featured-image">
+                <img width="100%" height="auto" src="img/low-poly-3305284_1920.jpg" />
+            </figure>
+
+            <section class="content my-article-content">
+                <h3><a href="#" class="link">Projekt 1</a></h3>
+
+                <p>Kurzbeschreibung Projekt 1</p>
+                <a href="#" class="more-link">Mehr …</a>
+            </section>
+
+        </article>
+
+        <article>
+
+            <figure class="image my-featured-image">
+                <img width="100%" height="auto" src="img/small-poly-3350169_1920.jpg" />
+            </figure>
+
+            <section class="content my-article-content">
+                <h3><a href="#" class="link">Projekt 2</a></h3>
+
+                <p>Kurzbeschreibung Projekt 2</p>
+                <a href="#" class="more-link">Mehr …</a>
+            </section>
+
+        </article>
+
+        <article>
+
+            <figure class="image my-featured-image">
+                <img width="100%" height="auto" src="img/dog-3275593_1920.jpg" />
+            </figure>
+
+            <section class="content my-article-content">
+                <h3><a href="#" class="link">Projekt 3</a></h3>
+
+                <p>Kurzbeschreibung Projekt 3</p>
+                <a href="#" class="more-link">Mehr …</a>
+            </section>
+
+        </article>
+
+        <article>
+
+            <figure class="image my-featured-image">
+                <img width="100%" height="auto" src="img/poly-3295857_1920.jpg" />
+            </figure>
+
+            <section class="content my-article-content">
+                <h3><a href="#" class="link">Projekt 4</a></h3>
+
+                <p>Kurzbeschreibung Projekt 4</p>
+                <a href="#" class="more-link">Mehr …</a>
+            </section>
+
+        </article>
+
+        <article>
+
+            <figure class="image my-featured-image">
+                <img width="100%" height="auto" src="img/small-poly-3310319_1920.jpg" />
+            </figure>
+
+            <section class="content my-article-content">
+                <h3><a href="#" class="link">Projekt 5</a></h3>
+
+                <p>Kurzbeschreibung Projekt 5</p>
+                <a href="#" class="more-link">Mehr …</a>
+            </section>
+
+        </article>
+
+        <article>
+
+            <figure class="image my-featured-image">
+                <img width="100%" height="auto" src="img/small-poly-3310320_1920.jpg" />
+            </figure>
+
+            <section class="content my-article-content">
+                <h3><a href="#" class="link">Projekt 6</a></h3>
+
+                <p>Kurzbeschreibung Projekt 6</p>
+                <a href="#" class="more-link">Mehr …</a>
+            </section>
+
+        </article>
+
+        <!--Loop endet-->
+
+
+    </main>
+
+    <footer>
+        <p>Code &copy; <a href="https://ennohyttrek.de" target="_blank">Enno Hyttrek</a></p>
+        <p>Images &copy; <a href="https://pixabay.com/users/manuchi-1728328/" target="_blank">Manuchi</a></p>
+        <nav>
+            <div class="menu-footer-de-container">
+                <ul id="menu-footer-de" class="menu">
+                    <li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="#">Impressum</a></li>
+                    <li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="#">Datenschutz</a></li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+    <nav id="mobile-nav" class="mobile-nav" onclick="hideMobileNav()">
+
+        <div class="menu-mobile-de-container">
+            <ul id="menu-mobile-de" class="menu">
+                <li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="#">Menüpunkt 1</a></li>
+                <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="#">Menüpunkt 2</a></li>
+                <li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="#">Menüpunkt 3</a></li>
+            </ul>
+        </div>
+    </nav>
+</body></html>

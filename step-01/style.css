@@ -1,0 +1,70 @@
+/*
+Stylesheet für die Übung Responsive Design
+© 2021 Enno Hyttrek
+ehy.training@gmail.com
+https://ennohyttrek.de
+https://github.com/ennohyttrek
+
+Schritt 01
+Grundlegende CSS Strukturen ánlegen:
+- Reset
+- Layout
+- Typografie
+- Medie Queries
+
+Ergebnis ist ein 'vorläufiges Mobiltelefon Design' für die Seite. D.h. es wird der 'natürliche' Fluß der HTML Struktur — nämlich, dass alle Blockelemente untereinander stehen — genutzt um den Inhalt der Seite auf dem vertikalen Viewport bereits nahezu optimal darzustellen. 
+
+Dies ist der erste Schritt in einem Gestaltungsansatz für Webdesign, den man 'mobile first' nennt.
+
+Die Anpassungen des Layouts an breitere Bildschirme, bis hin zu großen Desktop Monitoren erfolgt im weiteren Verlauf in den Media Queries im unteren Teil des Stylesheets. In diesem Schritt ist hier lediglich eine Media Query vorbereitend angelegt und noch völlig leer gehalten. D.h. es ist noch keinerlei Anpassung an Screens erfolgt, die über eine Darstellungsbreite von 600 Pixel (oder anders ausgedrückt: den Breakpoint 600px) hinausgehen. 
+*/
+
+/*
+RESET
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+LAYOUT
+*/
+
+.more-link,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    padding: 1rem 20px;
+}
+
+article {
+    padding-bottom: 2rem;
+}
+
+
+/*
+TYPOGRAPHY
+*/
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+
+/*
+RESPONSIVE DESIGN (MEDIA QUERIES)
+*/
+
+@media only screen and (min-width: 600px) {
+    
+}

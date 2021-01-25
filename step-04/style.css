@@ -1,0 +1,273 @@
+/*
+Stylesheet für die Übung Responsive Design
+© 2021 Enno Hyttrek
+ehy.training@gmail.com
+https://ennohyttrek.de
+https://github.com/ennohyttrek
+
+Schritt 04
+
+Nun geht es endlich an das Layout für größere Screens, also das eigentliche Responsive Design. Dies geschiet im CSS wie schon gesagt alles in den Media Queries. Mit anderen Worten: alles oberhalb der Media Queries ist Mobile Design oder allgemeines Design.
+
+Die erste Media Query bedient den Breakpoint 600 Pixel. Genauer gesagt beinhaltet die Media Query den Wert min-width 600px, also Mindestbreite 600 Pixel. Das heisst, alles CSS was innerhalb der Media Query steht betrifft Screens die mindestens 600px breit sind.
+
+In dieser Media Query machen wir als erstes das normale Huptmenü wieder sichtbar und lassen Mobil Menü und Burger Icon verschwinden.
+
+Dann müssen wir uns erst einmal darum kümmern, dass dieses Menü gut aussieht. Also vom Layout (horizontal) und von der Farbigkeit. Wir wollen hierbei ein Sticky Menü machen (Details dazu bitte im Video 'nachschlagen').
+
+Als nächstes machen wir unseren Hauptinhaltsbereich zweispaltig. Das geht, indem mir in der Media Query das MAIN Element zu einem Flex Container machen und die draunterliegenden ARTICLE Elemente auf 50% Breite einstellen. 
+
+Damit die unterschiedlich proportionierten Bilder gliechmässig aussehen, können wir die Höhe des FIGURE Elemnents abhängig von der Breite (Einheit VW)vereinheitlichen. Dabei müssen wir lediglich beachten deb vertikalen Overflow korrekt einzustellen, nämlich auf 'hidden'.
+
+Der Footer muss nun übrigens nicht mehr 100VW hoch sein. 
+
+*/
+
+/*
+RESET
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav.main-nav {
+    display: none;
+}
+
+
+/*
+LAYOUT
+*/
+
+.more-link,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    padding: 1rem 20px;
+}
+
+article {
+    padding-bottom: 2rem;
+}
+
+header {
+    padding-top: 50px;
+}
+
+footer,
+nav.mobile-nav,
+article {
+    min-height: 100vh;
+}
+
+footer p {
+    padding-bottom: 0;
+}
+
+/*
+NAVIGATION
+*/
+
+/**Nav Reset **/
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+/**Nav Burger Icon **/
+
+nav.burger-icon {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    padding: 8px;
+}
+
+nav.burger-icon span {
+    display: block;
+    height: 8px;
+    width: 34px;
+    margin-bottom: 3px;
+    border-radius: 3px;
+}
+
+/**Nav Mobile Menu **/
+
+nav.mobile-nav {
+    padding-top: 50px;
+}
+
+nav.mobile-nav ul {
+    padding: 0;
+
+}
+
+nav.mobile-nav ul a {
+    display: block;
+    width: 100%;
+    padding: 0.3em 20px;
+}
+
+/**Nav Main Menu **/
+
+nav.main-nav {
+    position: sticky;
+    top: 0;
+}
+
+nav.main-nav ul {
+    display: flex;
+}
+
+nav.main-nav ul li {
+    margin-right: 1em;
+}
+
+
+/*
+COLOR & STYLE
+*/
+
+/**C&S Backgrounds **/
+
+body {
+    background: hsl(200, 21%, 13%);
+}
+
+header {
+    background: hsl(200, 21%, 34%);
+}
+
+main {
+    background: #fff;
+}
+
+/**C&S Type Colors **/
+
+main,
+main a {
+    color: hsl(200, 21%, 13%);
+}
+
+header,
+footer,
+header a,
+footer a {
+    color: hsl(200, 21%, 89%);
+}
+
+main a:hover,
+nav.main-nav a:hover,
+footer a:hover {
+    color: rgb(255, 128, 0);
+}
+
+
+/**C&S Burger Icon **/
+
+nav.burger-icon span {
+    background: hsl(200, 21%, 68%);
+}
+
+/**C&S Mobile Menu **/
+
+nav.mobile-nav {
+    background: hsl(200, 21%, 34%);
+}
+
+nav.mobile-nav a {
+    color: hsl(200, 21%, 89%);
+    border-bottom: 1px solid hsl(200, 21%, 89%);
+}
+
+nav.mobile-nav li:first-child {
+    border-top: 1px solid hsl(200, 21%, 89%);
+}
+
+/**C&S Main Menu **/
+
+nav.main-nav {
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav.main-nav a {
+    color: hsl(200, 21%, 34%);
+}
+
+
+
+
+/*
+TYPOGRAPHY
+*/
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/**Type Mobile Menu **/
+
+nav.mobile-nav {
+    font-size: 2.5em;
+}
+
+/**Type Main Menu **/
+
+nav.main-nav {
+    font-weight: 700;
+}
+
+/*
+RESPONSIVE DESIGN (MEDIA QUERIES)
+*/
+
+@media only screen and (min-width: 600px) {
+
+    /**Menu Reset**/
+
+    nav.main-nav {
+        display: block;
+    }
+
+    nav.mobile-nav,
+    nav.burger-icon {
+        display: none;
+    }
+
+    /**600px Two Col Layout**/
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    article {
+        width: 50%;
+    }
+    
+    article figure {
+        height: 30vw;
+        overflow-y: hidden;
+    }
+    
+    footer {
+        min-height: 20vh;
+    }
+
+}
