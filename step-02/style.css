@@ -93,7 +93,8 @@ main {
 
 /**C&S Type Colors **/
 
-main, main a {
+main,
+main a {
     color: hsl(200, 21%, 13%);
 }
 
