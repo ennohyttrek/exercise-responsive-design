@@ -11,6 +11,8 @@ Ab hier kann man nun mit weiteren Breakpoints (Media Queries) weitere größere 
 
 Wir werden im Rahmen der Übung nur noch einen weiteren Schritt im Hauptlayout gehen, nämlich auf dreispaltig ab der Breite von 1024 Pixel. Dazu müssen wir als Erstes eine entsprechende Media Query anlegen und dann lediglich die Werte für die Breite und Höhe der ARTICLE Elemente und die Höhe der Figure Elemente anpassen. 
 
+Damit sind wir erst einmal am Ende dieser Übung angelangt.
+
 */
 
 /*
