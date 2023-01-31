@@ -4,6 +4,8 @@ This is a little exercise in CSS layout techniques, which I put together for one
 
 Diese kleine CSS Übung wurde für einen meiner Kurse im Bereich Mediengestaltung erstellt.
 
+Ein Videotutorial dazu findet sich bei YouTube hier: https://www.youtube.com/playlist?list=PLSZHjIBhulpEUJTZgbNWeqf6X2LTgnsyv
+
 Enno Hyttrek
 ehy.training@gmail.com
 ennohyttrek.de
